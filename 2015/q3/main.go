@@ -15,4 +15,5 @@ func main() {
 		log.Fatalf("Error: %#v", err.Error())
 	}
 	fmt.Printf("No of house receiving presents: %#v\n", q3p1(dirs))
+	fmt.Printf("No of house receiving presents with santa and robo alternating: %#v\n", q3p2(dirs))
 }
