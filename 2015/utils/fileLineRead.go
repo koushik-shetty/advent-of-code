@@ -1,7 +1,8 @@
-package main
+package utils
 
 import (
 	"bufio"
+	"log"
 	"os"
 )
 
@@ -15,6 +16,7 @@ type Input struct {
 func NewInput(file string, batchSize int) Input {
 	f, err := os.Open(file)
 	if err != nil {
+		log.Fatalf("Err: %#v\n\n", err.Error())
 		os.Exit(1)
 	}
 
@@ -27,7 +29,7 @@ func NewInput(file string, batchSize int) Input {
 	}
 }
 
-func (i *Input) readBatch() ([]string, error) {
+func (i *Input) ReadBatch() ([]string, error) {
 	lines := make([]string, 0)
 	l := 0
 	for l < i.BatchSize && i.rdr.Scan() {

@@ -2,14 +2,17 @@ package main
 
 import (
 	"fmt"
+
+	"github.com/koushik-shetty/advent-of-code/v2/2015/utils"
 )
 
 func q2p1(file string) int {
-	ip := NewInput(file, 100)
+	min := utils.Min
+	ip := utils.NewInput(file, 100)
 	totalPaper := 0
 	rl := 0
 	for {
-		if lines, err := ip.readBatch(); err != nil {
+		if lines, err := ip.ReadBatch(); err != nil {
 			panic(err)
 		} else if len(lines) == 0 {
 			break
@@ -24,11 +27,4 @@ func q2p1(file string) int {
 	}
 
 	return totalPaper
-}
-
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
 }
