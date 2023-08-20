@@ -1,17 +1,6 @@
 package main
 
-import (
-	"log"
-
-	"github.com/koushik-shetty/advent-of-code/v2/2015/utils"
-)
-
-func q3p1(file string) int {
-	ip := utils.NewInput(file, 10000)
-	dirs, err := ip.ReadChunk()
-	if err != nil {
-		log.Fatalf("Error: %#v", err.Error())
-	}
+func q3p1(dirs string) int {
 	curr := []int{0, 0}
 	visited := make(map[int]map[int]bool)
 	visited[curr[0]] = make(map[int]bool)
