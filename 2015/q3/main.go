@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	file := "q3.txt"
+	file := "test.txt"
 	ip := utils.NewInput(file, 10000)
 	dirs, err := ip.ReadChunk()
 	if err != nil {
