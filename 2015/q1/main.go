@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	ip := utils.NewInput("q1.txt", 10000)
+	ip := utils.NewInput("test.txt", 10000)
 	text, err := ip.ReadChunk()
 	if err != nil {
 		log.Fatalf("Err: %#v\n", err.Error())
