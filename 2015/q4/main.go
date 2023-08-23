@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	file := "q4.txt"
+	file := "test.txt"
 	ip := utils.NewInput(file, 10000)
 	secrets, err := ip.ReadChunk()
 	if err != nil {
